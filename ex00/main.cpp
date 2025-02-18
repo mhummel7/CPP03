@@ -6,7 +6,7 @@
 /*   By: mhummel <mhummel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 11:00:56 by mhummel           #+#    #+#             */
-/*   Updated: 2025/02/18 09:45:48 by mhummel          ###   ########.fr       */
+/*   Updated: 2025/02/18 11:57:35 by mhummel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int	main(void)
 	robot.beRepaired(3);
 
 	// Test taking fatal damage with C3PO
-    robot2.takeDamage(15);  // More damage than hit points
-    robot2.attack("Enemy"); // Should fail due to no hit points
-    robot2.beRepaired(5);   // Should fail due to no hit points
+	robot2.takeDamage(15);	// More damage than hit points
+	robot2.attack("Enemy");	// Should fail due to no hit points
+	robot2.beRepaired(5);	// Should fail due to no hit points
 
 	// Test energy points depletion with R2D2
 	for (int i = 0; i < 8; ++i)
