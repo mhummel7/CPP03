@@ -6,7 +6,7 @@
 /*   By: mhummel <mhummel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 14:57:39 by mhummel           #+#    #+#             */
-/*   Updated: 2025/03/03 15:04:12 by mhummel          ###   ########.fr       */
+/*   Updated: 2025/03/04 14:11:33 by mhummel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,21 @@ int	main(void)
 	clap.attack("Enemy");
 	clap.takeDamage(5);
 	clap.beRepaired(3);
+
 	std::cout << "\n=== Testing ScavTrap ===" << std::endl;
 	ScavTrap scav("ST-001");
 	scav.attack("Enemy");
 	scav.takeDamage(30);
 	scav.beRepaired(20);
 	scav.guardGate();
+
 	std::cout << "\n=== Testing FragTrap ===" << std::endl;
 	FragTrap frag("FT-001");
 	frag.attack("Enemy");
 	frag.takeDamage(40);
 	frag.beRepaired(30);
 	frag.highFivesGuys();
+
 	std::cout << "\n=== Testing DiamondTrap ===" << std::endl;
 	DiamondTrap diamond("DT-001");
 	diamond.attack("Enemy");
@@ -42,6 +45,7 @@ int	main(void)
 	diamond.guardGate();
 	diamond.highFivesGuys();
 	diamond.whoAmI();
+
 	std::cout << "\n=== Testing Energy Depletion ===" << std::endl;
 	// ScavTrap has 50 energy points, each action costs 1
 	for (int i = 0; i < 48; ++i)
@@ -50,6 +54,7 @@ int	main(void)
 	}
 	// Should show no energy points left
 	scav.attack("Enemy");
+
 	std::cout << "\n=== Testing Fatal Damage ===" << std::endl;
 	DiamondTrap diamond2("DT-002");
 	diamond2.takeDamage(200); // More damage than hit points
